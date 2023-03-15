@@ -801,11 +801,13 @@ html, body {
 /* Mobile Overlay */
 
 .overlay {
-    height: 100vh;
-    min-width: 540px;
+    opacity: 0;
+    height: 100%;
+    z-index: -1000;
+    min-width: 100vw;
     position: absolute;
     top: 0;
-    left: -1000px;
+    left: -1960px;
     z-index: 1;
     background-color: #181818;
     overflow: hidden;
@@ -815,9 +817,12 @@ html, body {
 .overlay__active {
     top: 0;
     left: 0;
+    opacity: 1;
+    
 }
 
 .overlay__content {
+    margin-top: -20px;
     display: flex;
     height: 100vh;
     flex-direction: column;
