@@ -771,14 +771,18 @@ body {
     
 
     .profile__feed {
+        background-color: red;
         margin-top: 28px;
+        height: 100%;
         width: 424px;
     }
 
     /* Follower Mobile Navigation */
 
     .follower__container {
+        background-color: red;
         width: 424px;
+        height: 60px;
         justify-content: center;
         margin-top: 0;
         padding: 0;
@@ -786,13 +790,17 @@ body {
 
     .follower__names {
         justify-content: left;
-        
         min-width: 300px;
         max-width: 300px;
     }
 
+    .follower__names img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
     .follower__details  {
-    display: none;
+        display: none;
     }
 
     .follower__actions {
@@ -837,7 +845,8 @@ body {
 }
 
 .overlay__content {
-    margin-top: -20px;
+    margin-top: -50px;
+    margin-left: -10px;
     display: flex;
     height: 100vh;
     flex-direction: column;
