@@ -1,0 +1,662 @@
+/* CSS Reset */
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+:root {
+  --grapefruit: #ff5959;
+  --blobgreen: #5cff57;
+  --champagne: #649dd6;
+  --lightgray: #666666;
+  --dimgray: #242424;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/* Website Colour Palette 
+#ff5959; Grapefruit (ADMIN ACCESS)
+#5cff57; Blob Green (ADMIN ACCESS)
+#f1e5ac; Champagne (ACCENT COLOUR)
+#c6c6c6; Light Grey (MAIN COLOUR)
+#696969; Dim Grey (INTERACTIVE)
+*/
+
+.logo {
+  display: block;
+  height: auto;
+  margin: 10px auto 60px auto;
+}
+
+.align {
+  display: grid;
+  place-items: center;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgba(250, 250, 250, 1);
+}
+
+/* Login Page */
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  margin: 0 0 30px;
+  padding: 0;
+  color: var(--lightgray);
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--lightgray);
+  margin-bottom: 50px;
+  border: none;
+  border-bottom: 1px solid var(--lightgray);
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: var(--lightgray);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--champagne);
+  font-size: 12px;
+}
+
+.login-box .submit-box input {
+  all: unset;
+  margin: auto;
+  width: 86%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-box form a,
+.login-box .submit-box input {
+  display: grid;
+  place-items: center;
+  padding: 10px 20px;
+  color: var(--champagne);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+.login-box a:hover,
+.login-box .submit-box input:hover {
+  background: var(--champagne);
+  color: #fff;
+  border-radius: 25px;
+  letter-spacing: 4px;
+  box-shadow: 0 0 5px var(--champagne), 0 0 15px var(--champagne),
+    0 0 35px var(--champagne), 0 0 65px var(--champagne);
+}
+
+.login-box .submit-box p {
+  color: var(--lightgray);
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-box .login-error {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.display_block {
+  text-align: center;
+}
+
+.popup {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popup h5 {
+  color: #555;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: 1s;
+  text-align: center;
+}
+
+.popup h5:hover {
+  opacity: 1;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -120px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+/* Register Page */
+
+.register-logo {
+  margin-top: 50px;
+}
+
+/* Feed Page CSS */
+
+/* Header Content */
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 1px 1px rgb(200, 200, 200);
+  z-index: 1;
+  height: 8%;
+}
+
+.header-split {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-nav .header-split .nav-icon {
+  margin-right: 25px;
+  margin-left: 25px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.header-nav .header-split .nav-icon:hover {
+  transform: scale(1.2);
+}
+
+.header-nav .header-split .selected {
+  filter: invert(64%) sepia(19%) saturate(1208%) hue-rotate(172deg)
+    brightness(90%) contrast(84%);
+}
+
+/* Main feed content */
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feed-wrapper {
+  margin-top: 100px;
+}
+
+.feed-container {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feed-post {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.feed-post-username {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: 10px;
+  padding: 5px;
+  color: black;
+}
+
+.feed-post-image img {
+  object-fit: cover;
+}
+
+.feed-post-interaction {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.feed-post-interaction img {
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.feed-post-interaction img:hover {
+  transform: scale(1.2);
+  filter: invert(87%) sepia(27%) saturate(420%) hue-rotate(352deg)
+    brightness(105%) contrast(89%);
+  cursor: pointer;
+}
+
+.feed-post-interaction .feed-post-description {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: black;
+}
+
+.feed-post-interaction .feed-likes {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+}
+
+.feed-post-interaction .break {
+  margin: 0px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.feed-post-interact input[type="text"] {
+  height: auto;
+  width: 320px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-bottom: 14px;
+  border-width: medium;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.feed-post-interact {
+  display: flex;
+  flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+.feed-post-comment-box {
+  max-height: 86px;
+  max-width: 480px;
+  overflow-x: hidden;
+}
+/* Upload CSS */
+
+.upload {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.image-preview-container {
+  min-width: 25%;
+  max-width: 50%;
+  margin-right: 25px;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.image-preview-container img {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  overflow: hidden;
+  display: none;
+  margin-bottom: 10px;
+}
+.image-preview-container .hidden {
+  display: none;
+}
+
+.image-preview-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-preview-container label:hover {
+  background: var(--champagne);
+  color: #fff;
+  border-radius: 25px;
+  letter-spacing: 4px;
+  box-shadow: 0 0 5px var(--champagne), 0 0 15px var(--champagne),
+    0 0 35px var(--champagne), 0 0 65px var(--champagne);
+}
+
+.upload-description {
+  max-width: 15%;
+  margin-left: 25px;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 1rem;
+  border-radius: 20px;
+}
+.upload-description input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.upload-description input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.upload-description p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  padding: 0;
+  color: var(--lightgray);
+  text-align: left;
+}
+
+.upload-description .post-success {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  color: var(--lightgray);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 20px;
+  opacity: 0.5;
+}
+/* Profile Page CSS */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 220px;
+  padding: 4rem;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 20px;
+}
+
+.profile-username {
+  margin-top: 20px;
+}
+
+.profile-container .profile-username p {
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  font-weight: 400;
+  color: var(--lightgray);
+}
+
+.profile-container .profile-username .bold {
+  font-weight: 500;
+}
+/* Admin Page */
+
+.admin-container {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 650px;
+  height: 200px;
+  padding: 4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 20px;
+}
+
+.admin-post .admin-details {
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  text-align: left;
+  font-weight: 500;
+  color: black;
+}
+
+.admin-post .admin-details .admin-description {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.admin-container .admin-image img {
+  width: 175px;
+  height: auto;
+  margin-left: 0;
+  object-fit: contain;
+}
+
+.admin-buttons img {
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.admin-buttons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width : 320px) and (max-width : 550px) {
+
+  /* Login/Register Responsive */
+  .login-box {
+    width: 340px;
+  }
+
+  /* Feed Responsive  */
+  .header-nav .header-split .nav-icon {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .header-nav-logo {
+    padding: 0;
+    margin-right: -40px;
+    margin-left: -40px; 
+  }
+
+  .feed-container {
+    transform: scale(0.7);
+    margin-top: -100px;
+    margin-bottom: -200px;
+  }
+
+  /* Upload Responsive */
+  .image-preview-container {
+    min-width: 75%;
+    margin-right: 0;
+    margin-top: -40px;
+    margin-bottom: 25px;
+  }
+  .image-preview-container img {
+    width: 250px;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .upload-content {
+    flex-direction: column  ;
+  }
+
+  .upload-description {
+    max-width: 75%;
+    margin-left: 0;
+  }
+
+  /* Profile Response */
+
+  .profile-container {
+    width: 200px;
+  }
+
+  /* Admin Responsive */
+  .admin-post {
+    flex-direction: column;
+    width: 220px;
+    height: 500px;
+  }
+
+  .admin-post .admin-details {
+    text-align: center;
+  }
+
+  .admin-container .admin-image img {
+    margin-top: -30px;
+  }
+}

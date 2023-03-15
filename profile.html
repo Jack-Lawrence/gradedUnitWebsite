@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="java.js"></script>
+    <script src="https://kit.fontawesome.com/1a831f6d78.js" crossorigin="anonymous"></script>
+    <title>Port</title>
+</head>
+<body>
+    <div class="feed__container">
+        <header class="website__nav left__icons"> 
+            <div class="nav__split">
+				<a href="feed.html"><i class="fa-solid fa-fw fa-rss nav__icon"></i></a>
+                <a href="feed.php"><i class="fa-regular fa-fw fa-compass nav__icon"></i></a>
+                <a href="feed.php"><i class="fa-solid fa-fw fa-arrow-up-from-bracket nav__icon"></i></a>
+            </div>
+            <div class="nav__split">
+                <h1>PORT</h1>
+                
+            </div>
+            <div class="nav__split right__icons">
+                <a href="profile.html"><i class="fa-regular fa-fw fa-user selected nav__icon"></i></a>
+                <a href="feed.php"><i class="fa-regular fa-fw fa-message nav__icon"></i></a>
+                <a href="feed.php"><i class="fa-solid fa-fw fa-arrow-right-from-bracket nav__icon"></i></a>
+                <button class="dropdown" onclick="openMenu()">Menu</button>
+            </div>
+        </header>
+        <div class="profile__container">
+            <div class="profile__header">
+                <div class="profile__info">
+                    <div class="profile__avatar">
+                        <img src="images\jackAvatar.jpg">
+                    </div>
+                    <div class="profile__names">
+                        <h1>Jack Lawrence</h1>
+                        <p>@JackLawrence</p>
+                    </div>
+                </div>
+            <div class="profile__pages">
+                <button onclick="divno(0)" id="postButton" class="selected">Posts</button>
+                <p>-</p>
+                <button onclick="divno(1)" id="followerButton" >Followers</button>
+                <p>-</p>
+                <button onclick="divno(2)" id="followingButton">Following</button>
+            </div>
+        </div>
+            <div class="profile__feed">
+                <!-- Profile Feed Section -->
+                <div id="profilePostDiv">
+
+                    <div class="profile__post__container">
+                            <div class="profile__post__info">
+                                <div class="profile__post__names">
+                                    <h1>Jack Lawrence</h1>
+                                    <p>@JackLawrence</p>
+                                </div>
+                            </div>
+                            <div class="profile__post__content">
+                                <div class="profile__post__left">
+                                    <div class="profile__post__text">
+                                        <h2>My First Project</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac turpis ut sapien tempor elementum. Sed fermentum justo a dapibus volutpat. In felis tortor, dignissim nec tincidunt ut, mollis vitae mi. Vivamus tempor, magna sed interdum porta, ligula odio convallis lorem, et dignissim neque nulla ac enim.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac turpis ut sapien tempor elementum. Sed fermentum justo a dapibus volutpat. In felis tortor, dignissim nec tincidunt ut, mollis vitae mi. Vivamus tempor, magna sed interdum porta, ligula odio convallis lorem, et dignissim neque nulla ac enim.</p>
+                                    </div>
+                                    <div class="profile__post__comments">
+                                        <h1>COMMENTS</h1>
+                                        <label for="comment" hidden>Comment</label>
+                                        <input type="text" name="comment" id="comment" pattern="[A-Z a-z0-9@.!]{0,255}">
+                                        <!-- <input type="hidden" value="$postNo" name="postNum"> -->
+                                        <button type="submit" style="all: unset;">
+                                            <i class="fa-regular fa-fw fa-comment"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="profile__post__right">
+                                    <div class="profile__post__media">
+                                        <h1>test</h1>
+                                    </div>
+                                    <div class="profile__post__media">
+                                        <h1>test</h1>
+                                    </div>
+                                 </div> -->
+
+                            </div>
+                    </div>
+
+                    <div class="profile__post__container">
+                        <div class="profile__post__info">
+                            <div class="profile__post__names">
+                                <h1>Jack Lawrence</h1>
+                                <p>@JackLawrence</p>
+                            </div>
+                        </div>
+                        <div class="profile__post__content">
+                            <div class="profile__post__left">
+                                <div class="profile__post__text">
+                                    <h2>My First Project</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac turpis ut sapien tempor elementum. Sed fermentum justo a dapibus volutpat. In felis tortor, dignissim nec tincidunt ut, mollis vitae mi. Vivamus tempor, magna sed interdum porta, ligula odio convallis lorem, et dignissim neque nulla ac enim.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac turpis ut sapien tempor elementum. Sed fermentum justo a dapibus volutpat. In felis tortor, dignissim nec tincidunt ut, mollis vitae mi. Vivamus tempor, magna sed interdum porta, ligula odio convallis lorem, et dignissim neque nulla ac enim.</p>
+                                </div>
+                                <div class="profile__post__comments">
+                                    <h1>COMMENTS</h1>
+                                    <label for="comment" hidden>Comment</label>
+                                    <input type="text" name="comment" id="comment" pattern="[A-Z a-z0-9@.!]{0,255}">
+                                    <!-- <input type="hidden" value="$postNo" name="postNum"> -->
+                                    <button type="submit" style="all: unset;">
+                                        <i class="fa-regular fa-fw fa-comment"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- <div class="profile__post__right">
+                                <div class="profile__post__media">
+                                    <h1>test</h1>
+                                </div>
+                                <div class="profile__post__media">
+                                    <h1>test</h1>
+                                </div>
+                             </div> -->
+
+                        </div>
+                </div>
+
+                </div>
+
+                <!-- Profile Follower Section -->
+                <div id="profileFollowerDiv">
+
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar3.jpg" id="preview__image" class="follower__avatar">
+                            <h1>John Smith</h1>
+                            <p>@JohnSm1th</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>123</h2><p>Followers</p>
+                            <h2>45</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar2.jpg" id="preview__image" class="follower__avatar">
+                            <h1>Jeff Johansen</h1>
+                            <p>@JeffJ0h4nny</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>1002</h2><p>Followers</p>
+                            <h2>343</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar.jpg" id="preview__image" class="follower__avatar">
+                            <h1>Maya Jane</h1>
+                            <p>@M4yaJ4ne</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>78</h2><p>Followers</p>
+                            <h2>12</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+                <!-- Profile Following Section -->
+                </div>
+                <div id="profileFollowingDiv">
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar4.jpeg" id="preview__image" class="follower__avatar">
+                            <h1>Josh Hynes</h1>
+                            <p>@J0sH4ynes</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>89</h2><p>Followers</p>
+                            <h2>124</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar5.jpg" id="preview__image" class="follower__avatar">
+                            <h1>Nina Turner</h1>
+                            <p>@NinaTurner43</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>550</h2><p>Followers</p>
+                            <h2>43</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="follower__container">
+                        <div class="follower__names">
+                            <img src="images\avatar6.jpg" id="preview__image" class="follower__avatar">
+                            <h1>Jamie Jones</h1>
+                            <p>@J4mieJ0n3ss</p>
+                        </div>
+                        <div class="follower__details">
+                            <h2>7892</h2><p>Followers</p>
+                            <h2>498</h2><p>Following</p>
+                        </div>
+                        <div class="follower__actions">
+                            <button>Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile__menu" class="overlay">
+        <a class="close" onclick="closeMenu()">&times;</a>
+        <div class="overlay__content">
+            <a href="feed.html" onclick="closeMenu()"><i class="fa-solid fa-fw fa-rss nav__icon"></i>Feed</a>
+            <a href="#" onclick="closeMenu()"><i class="fa-regular fa-fw fa-compass nav__icon"></i>Explore</a>
+            <a href="#" onclick="closeMenu()"><i class="fa-solid fa-fw fa-arrow-up-from-bracket nav__icon"></i>Upload</a>
+            <a href="profile.html" onclick="closeMenu()"><i class="fa-regular fa-fw fa-user selected nav__icon"></i>Profile</a>
+            <a href="#" onclick="closeMenu()"><i class="fa-regular fa-fw fa-message nav__icon"></i>Messages</a>
+            <a href="#" onclick="closeMenu()"><i class="fa-solid fa-fw fa-arrow-right-from-bracket nav__icon"></i>Sign Out</a>
+        </div>
+    </div>
+</body>
+</html>

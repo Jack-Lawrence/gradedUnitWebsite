@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/1a831f6d78.js" crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+    <title>Port</title>
+</head>
+<body>
+    <div class="login__container">
+        <div class="register__box">
+
+            <form>
+              <div class="register__form">
+                <div class="register__left">
+                  <h1>Register</h1>
+                  <div class="user__box">
+                    <input type="email" name="emailAddress" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                    <label>Email</label>
+                  </div>
+                  <div class="user__box">
+                      <input type="password" name="password" id="myInput" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                      <label>Password</label>
+                  </div>
+                  <div class="user__box">
+                    <input type="password" name="password" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                    <label>Password Confirm</label>
+                  </div>
+                </div>
+                <div class="register__divider">
+                  <p>────────────────────────────────────────────</p>
+                </div>
+                <div class="register__right">
+
+                  <div class="avatar__container">
+                    <img src="images\avatarPlaceholder.png" id="preview__image">
+                    <input type="file" id="file" accept=".png, .jpg, .jpeg" onchange="previewImage(event);  required" >
+                    <label for="file" id="avatar__upload"></label>
+                  </div>
+
+                  <div class="user__box">
+                    <input type="text" name="username" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                    <label>Username</label>
+                  </div>
+                  <div class="user__box">
+                    <input type="text" name="firstName" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                    <label>First Name</label>
+                  </div>
+                  <div class="user__box">
+                    <input type="text" name="lastName" pattern="[A-Za-z0-9@.]{0,255}" required/>
+                    <label>Last Name</label>
+                  </div>
+                  <div class="login__submit">
+                    <a href="profile.html"><button>Login</button></a>
+                    <input type="submit" name="logSubmit" value="Create">
+                  </div>  
+                </div>
+                
+            </div>  
+            </form>
+        </div>    
+    </div>
+</body>
+</html>
