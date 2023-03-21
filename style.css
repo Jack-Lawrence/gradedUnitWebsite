@@ -283,9 +283,9 @@ html, body {
 /* Feed Page CSS */
 
 .feed__container {
-    height: 100%;
+    height: 100vh;
     background-color:#3abedf;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -633,19 +633,20 @@ html, body {
 /* MESSAGES WEBPAGE CSS */
 
 .messages__container {
+    margin-top: 35px;
+    margin-bottom: 100px;
     display: -webkit-flex;  
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-y: auto;
+    overflow-y: hidden;
     width: 100%;
     height: 100%;
     color: black;
 }
 
 .messages__feed {
-    margin-top: 90px;
-    margin-bottom: 100px;
+
     display: -webkit-flex;  
     width: 1100px;
     height: 770px;
@@ -1026,7 +1027,7 @@ html, body {
     margin-top: -50px;
     margin-left: -10px;
     display: -webkit-flex;  
-    height: 1080px;
+    height: 100vh;
     flex-direction: column;
     align-items: left;
     justify-content: center;
