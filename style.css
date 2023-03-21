@@ -661,15 +661,18 @@ body {
     background-color: #1d1d1b;
     border-radius: 0px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     border-radius: 10px 10px 0px 0px;
+    /* background-color: green; */
 }
 
 .messages__users {
+
     width: 330px;
     border-radius: 10px 0px 0px 0px;
     height: 753px;
-
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .messages__user {
@@ -687,9 +690,9 @@ body {
 .messages__chat {
     width: 770px;
     height: 753px;
+
     border-radius: 0px 10px 0px 0px;
-
-
+    /* background-color: purple; */
 }
 
 .messages__log {
@@ -698,6 +701,7 @@ body {
     border-left: 1px solid grey;
     overflow:auto; /* changed to auto */
     z-index:999; /* probably not required */
+    /* background-color: blue; */
 }
 
 .messages__to {
@@ -707,7 +711,6 @@ body {
     text-align: left;
     background-color: #3abedf;
     font-size: 18px;
-
     max-width: 365px;
     min-height: 20px;
     margin-left: 365px;
@@ -724,7 +727,6 @@ body {
     text-align: left;
     background-color: black;
     font-size: 18px;
-
     max-width: 365px;
     min-height: 20px;
     margin-left: 20px;
@@ -739,6 +741,8 @@ body {
     align-items: center;
     width: 770px;
     height: 75px;
+    padding-left: 5px;
+    border-left: 1px solid grey;
 }
 
 .messages__comment i {
@@ -941,6 +945,62 @@ body {
         margin-top: 5px;
         font-size: 12px;
         letter-spacing: 2px;
+    }
+
+    /* Messages Mobile CSS */
+
+    .messages__feed {
+        margin-top: 96px;
+        height: 700px;
+        width: 424px;
+    }
+
+    .messages__user h1,
+    .messages__user p {
+        display: none;
+    }
+
+    .messages__users {
+        width: 100px;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .messages__user {
+        display: flex;
+        padding-left: 30px;
+
+    }
+
+    .messages__log,
+    .messages__chat,
+    .messages__comment {
+        max-width: 306px;
+    }
+
+    .messages__comment i {
+        margin-right: 10px;
+    }
+
+    .messages__from {
+        width: 100px;
+    }
+    .messages__to {
+        max-width: 100px;
+        min-height: 20px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .messages__log {
+        height: 625px;
+    }
+
+    .messages__comment input[type="text"] {
+        width: 270px;
     }
 
 }
