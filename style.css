@@ -12,16 +12,14 @@ html, body {
 html {
     position: fixed;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
     margin: 0;
     width: 100vw; 
     height: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+
   }
 
 /* Dev Tools To Swap Pages */
@@ -298,7 +296,7 @@ body {
 .feed__container {
     height: 100vh;
     background-color:#3abedf;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -534,7 +532,6 @@ body {
     color: white;
     border-radius: 0px;
     background-color: rgba(255, 255, 255, 0.2);
-
 }
 
 
@@ -578,14 +575,16 @@ body {
     max-width: 450px;
 }
 
-.follower__names h1 {
+.follower__names h1,
+.messages__user h1 {
     font-family: 'Ubuntu Condensed', sans-serif;
     font-weight: 400;
     color: white;
     font-size: 24px;
 }
 
-.follower__names p {
+.follower__names p,
+.messages__user p {
     color: white;
     font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -642,6 +641,131 @@ body {
     color:#3abedf;
 }
 
+/* MESSAGES WEBPAGE CSS */
+
+.messages__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+}
+
+.messages__feed {
+    margin-top: 55px;
+    display: flex;
+    width: 1100px;
+    height: 753px;
+    background-color: #1d1d1b;
+    border-radius: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.messages__users {
+    width: 330px;
+    border-radius: 10px 0px 0px 0px;
+    height: 753px;
+
+}
+
+.messages__user {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 15px;
+    align-items: center;
+    width: 315px;
+    height: 75px;
+    border-bottom: 1px solid grey;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+.messages__chat {
+    width: 770px;
+    height: 753px;
+    border-radius: 0px 10px 0px 0px;
+
+
+}
+
+.messages__log {
+    width: 770px;
+    height: 678px;
+    border-left: 1px solid grey;
+    overflow:auto; /* changed to auto */
+    z-index:999; /* probably not required */
+}
+
+.messages__to {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    background-color: #3abedf;
+    font-size: 18px;
+
+    max-width: 365px;
+    min-height: 20px;
+    margin-left: 365px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.messages__from {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    background-color: black;
+    font-size: 18px;
+
+    max-width: 365px;
+    min-height: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+.messages__comment {
+    display: flex;
+    align-items: center;
+    width: 770px;
+    height: 75px;
+}
+
+.messages__comment i {
+    position: relative;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin-left: 12px;
+    transition: all 0.3s ease 0s;
+}
+
+.messages__comment i:hover {
+    transform: scale(1.1);
+}
+
+.messages__comment input[type="text"] {
+    resize:none;
+    height: 50px;
+    text-align: left;
+    width: 700px;
+    border: none;
+    color: white;
+    border-radius: 0px;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+
 /* Scrollbar CSS */
 ::-webkit-scrollbar {
     width: 5px;
@@ -665,7 +789,7 @@ body {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 424px) {
+@media only screen and (max-width: 440px) {
 
     /* Login Media Queries */
 
