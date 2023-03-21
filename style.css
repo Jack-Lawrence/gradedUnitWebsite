@@ -277,7 +277,7 @@ html, body {
     font-size: 24px;
     text-align: center;
     border-radius: 8px;
-        display: none;
+    display: none;
 }
 
 /* Feed Page CSS */
@@ -637,18 +637,18 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
     color: black;
 }
 
 .messages__feed {
-    margin-top: 100px;
+    margin-top: 90px;
     margin-bottom: 100px;
     display: -webkit-flex;  
     width: 1100px;
-    height: 753px;
+    height: 770px;
     background-color: #1d1d1b;
     border-radius: 0px;
     overflow-x: hidden;
@@ -679,7 +679,7 @@ html, body {
 
 .messages__chat {
     width: 770px;
-    height: 753px;
+    height: 670px;
 
     border-radius: 0px 10px 0px 0px;
     /* background-color: purple; */
@@ -687,7 +687,7 @@ html, body {
 
 .messages__log {
     width: 770px;
-    height: 678px;
+    height: 670px;
     border-left: 1px solid grey;
     overflow:auto; /* changed to auto */
     z-index:999; /* probably not required */
@@ -730,7 +730,7 @@ html, body {
     display: -webkit-flex;  
     align-items: center;
     width: 770px;
-    height: 75px;
+    height: 100px;
     padding-left: 5px;
     border-left: 1px solid grey;
 }
@@ -968,6 +968,10 @@ html, body {
         max-width: 306px;
     }
 
+    .messages__comment {
+
+    }
+
     .messages__comment i {
         margin-right: 10px;
     }
@@ -1022,7 +1026,7 @@ html, body {
     margin-top: -50px;
     margin-left: -10px;
     display: -webkit-flex;  
-    height: 100vh;
+    height: 1080px;
     flex-direction: column;
     align-items: left;
     justify-content: center;
