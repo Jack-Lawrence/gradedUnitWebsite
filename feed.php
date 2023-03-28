@@ -23,7 +23,7 @@
             <div class="nav__split">
                 <a href="profile.html"><i class="fa-regular fa-fw fa-user"></i></a>
                 <a href="messages.html"><i class="fa-regular fa-fw fa-message"></i></a>
-                <a href="feed.php"><i class="fa-solid fa-fw fa-arrow-right-from-bracket"></i></a>
+                <a href="logout.php"><i class="fa-solid fa-fw fa-arrow-right-from-bracket"></i></a>
                 <button class="dropdown" onclick="openMenu()">Menu</button>
             </div>
         </header>
