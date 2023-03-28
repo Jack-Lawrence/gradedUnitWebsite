@@ -1,14 +1,17 @@
 //Image preview in Upload page code
-const previewImage = (event) => {
-	const imageFiles = event.target.files;
-	const imageFilesLength = imageFiles.length;
+var previewImage = (event) => {
+	var imageFiles = event.target.files;
+	var imageFilesLength = imageFiles.length;
 	if (imageFilesLength > 0) {
-		const imageSrc = URL.createObjectURL(imageFiles[0]);
-		const imagePreviewElement = document.querySelector("#preview__image");
+		var imageSrc = URL.createObjectURL(imageFiles[0]);
+		var imagePreviewElement = document.querySelector("#preview__image");
 		imagePreviewElement.src = imageSrc;
 		imagePreviewElement.style.display = "block";
+		console.log("TestOne")
 	}
 };
+
+
 
 function resetButtons()
 {
@@ -98,4 +101,23 @@ function divno(pageno)
 		var overlay = doc.querySelector(".overlay");
 		overlay.classList.remove("overlay__active");
 
+	}
+
+	// Upload Preview Images Javascript
+
+	function uploadPreview(previewNo) {
+		switch(previewNo) {
+			case 0:
+				console.log("fileUploaded1")
+			break;
+			case 1:
+				console.log("fileUploaded2")
+			break;
+			case 2:
+				console.log("fileUploaded3")
+			break;
+			case 3:
+				console.log("fileUploaded4")
+			break;
+		}
 	}

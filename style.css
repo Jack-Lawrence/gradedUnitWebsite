@@ -199,6 +199,12 @@ html, body {
     width: 100%;
 }
 
+#preview__image__two{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 #file{
     display: none;
 }
@@ -288,6 +294,120 @@ html, body {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
+/* Upload Page CSS */
+.upload__container {
+    display: -webkit-flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;  
+}
+
+.upload__box {
+    margin-top: 50px;
+    height: 700px;
+    width: 424px;
+    background-color: #1d1d1b;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.upload__box__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0px 0px;
+    height: 20%;
+    border-bottom: 1px solid grey;
+}
+
+.upload__box__top h1 {
+    color: white;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.upload__box__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+.upload__box__bottom p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.upload__box__bottom input[type="text"] {
+    width: 240px;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #FFFFFF;
+    background-color: white;
+    outline: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+}
+
+.upload__media__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.upload__media__image {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.upload__media__image:hover {
+    transform: scale(1.05);
+}
+
+.upload__box__bottom input[type="submit"] {
+    margin-top: 10px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+
+    color: white;
+    background-color: #3abedf;
+    border-radius: 5px;
+    width: 175px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.upload__box__bottom input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/* Upload Image Preview CSS */
+
+
 
 /* Profile Page CSS */
 
